@@ -1,0 +1,167 @@
+<!-- Style settings -->
+
+body {
+    color: white;
+    background-color: #140E2E
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+  color: white;
+  background-color: #161F17;
+  background-image: linear-gradient(to bottom, #E0E0E0, #E0E0E0, #E0E0E0);
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  font-family: Helvetica;
+  color: 161F17;
+}
+
+
+.main-nav{
+ margin: 0;
+ padding: 0;
+ list-style: none;
+
+ display: flex;
+}
+
+.main-nav a{
+ padding: 0em 0.5em;
+ display: block;
+}
+
+.push{
+ margin-left: auto;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+} /* resizes image with browser */
+
+a { text-decoration: none; } /* removes underline */
+
+
+.rubik-<uniquifier> {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;              /* idk how to get this to work */
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+.image {
+ opacity: 1;
+ transition: opacity 0.3s ease;
+}
+.image:hover {
+ opacity: 0.5;
+}
+
+.tooltip{
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+}
+
+.tooltiptext{
+ visibility: hidden; /* automatically hides */
+ width: 100px;
+ background-colour: black;
+ colour: #000000;
+ text-align: center;
+ padding: 5px 0;
+ border-radius: 6px;
+ position: absolute;
+ z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
+<!-- SCROLLING MARQUEE TEXT -->
+
+/* Container styles */
+.scrolling-text-container {
+    background-color: #eff5ff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
+<!-- SCROLLING MARQUEE TEXT OVER -->
